@@ -7,7 +7,7 @@ import type { Activity } from "@/components/agent/RecentActivityTable";
 const mockActivities: Activity[] = [
   {
     id: "1",
-    type: "sale",
+    type: "sale" as const,
     property: "Burj Khalifa Residences",
     client: "Mohammed Al Rashid",
     value: "AED 2,500,000",
@@ -15,7 +15,7 @@ const mockActivities: Activity[] = [
   },
   {
     id: "2",
-    type: "tokenization",
+    type: "tokenization" as const,
     property: "Dubai Marina View",
     client: "Sarah Johnson",
     value: "AED 1,200,000",
@@ -23,7 +23,7 @@ const mockActivities: Activity[] = [
   },
   {
     id: "3",
-    type: "sale",
+    type: "sale" as const,
     property: "Palm Jumeirah Villa",
     client: "Ahmed Hassan",
     value: "AED 5,800,000",

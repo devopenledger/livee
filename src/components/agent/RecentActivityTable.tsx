@@ -1,4 +1,3 @@
-
 import {
   Table,
   TableBody,
@@ -8,7 +7,8 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-interface Activity {
+// ✅ Corrigido aqui: adicionado "export" na interface
+export interface Activity {
   id: string;
   type: "sale" | "tokenization";
   property: string;

@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -6,13 +5,6 @@ export default {
   content: ["./src/**/*.{ts,tsx}"],
   prefix: "",
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
-    },
     extend: {
       colors: {
         border: "hsl(var(--border))",
@@ -23,12 +15,14 @@ export default {
         primary: "#60A5FA",
         graphite: "#1A1A1A",
         white: "#FFFFFF",
-        // ADD THESE NEW COLORS
-        sidebar: "#F9FAFB",
-        "sidebar-foreground": "#1A1A1A",
-        "sidebar-border": "#E5E7EB",
-        "sidebar-accent": "#E5E7EB",
-        "sidebar-accent-foreground": "#1A1A1A",
+        sidebar: {
+          DEFAULT: "#F9FAFB",
+          foreground: "#403E43",
+          border: "#E5E7EB",
+          accent: "#E5E7EB",
+          "accent-foreground": "#403E43",
+          "primary-foreground": "#403E43",
+        },
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

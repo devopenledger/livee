@@ -1,4 +1,3 @@
-
 import * as React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { PublicLayout } from "./components/layout/PublicLayout";
@@ -16,6 +15,11 @@ import NotFound from "./pages/NotFound";
 
 // User Dashboard Pages
 import DashboardHome from "./pages/user/Home";
+import RentProperties from "./pages/user/RentProperties";
+import BuyTokens from "./pages/user/BuyTokens";
+import Portfolio from "./pages/user/Portfolio";
+import RentalHistory from "./pages/user/RentalHistory";
+import Finance from "./pages/user/Finance";
 import ConciergeRequests from "./pages/user/ConciergeRequests";
 import ProductMarketplace from "./pages/user/ProductMarketplace";
 import MyAdvisors from "./pages/user/MyAdvisors";
@@ -56,10 +60,15 @@ const App = () => {
 
           {/* User Dashboard Routes */}
           <Route path="/user" element={<DashboardLayout><DashboardHome /></DashboardLayout>} />
+          <Route path="/user/rent" element={<DashboardLayout><RentProperties /></DashboardLayout>} />
+          <Route path="/user/buy" element={<DashboardLayout><BuyTokens /></DashboardLayout>} />
           <Route path="/user/concierge" element={<DashboardLayout><ConciergeRequests /></DashboardLayout>} />
           <Route path="/user/marketplace" element={<DashboardLayout><ProductMarketplace /></DashboardLayout>} />
+          <Route path="/user/portfolio" element={<DashboardLayout><Portfolio /></DashboardLayout>} />
+          <Route path="/user/rental-history" element={<DashboardLayout><RentalHistory /></DashboardLayout>} />
+          <Route path="/user/finance" element={<DashboardLayout><Finance /></DashboardLayout>} />
           <Route path="/user/advisors" element={<DashboardLayout><MyAdvisors /></DashboardLayout>} />
-          <Route path="/user/unlock-markets" element={<DashboardLayout><UnlockMarkets /></DashboardLayout>} />
+          <Route path="/user/kyc" element={<DashboardLayout><UnlockMarkets /></DashboardLayout>} />
           
           {/* Agent Dashboard Routes */}
           <Route path="/agent" element={<DashboardLayout><AgentHome /></DashboardLayout>} />

@@ -14,6 +14,10 @@ import NotFound from "./pages/NotFound";
 
 // User Dashboard Pages
 import DashboardHome from "./pages/user/Home";
+import ConciergeRequests from "./pages/user/ConciergeRequests";
+import ProductMarketplace from "./pages/user/ProductMarketplace";
+import MyAdvisors from "./pages/user/MyAdvisors";
+import UnlockMarkets from "./pages/user/UnlockMarkets";
 
 const queryClient = new QueryClient();
 
@@ -31,7 +35,10 @@ const App = () => {
 
           {/* User Dashboard Routes */}
           <Route path="/user" element={<DashboardLayout><DashboardHome /></DashboardLayout>} />
-          {/* Other user routes will be added here */}
+          <Route path="/user/concierge" element={<DashboardLayout><ConciergeRequests /></DashboardLayout>} />
+          <Route path="/user/marketplace" element={<DashboardLayout><ProductMarketplace /></DashboardLayout>} />
+          <Route path="/user/advisors" element={<DashboardLayout><MyAdvisors /></DashboardLayout>} />
+          <Route path="/user/unlock-markets" element={<DashboardLayout><UnlockMarkets /></DashboardLayout>} />
           
           {/* Agent Dashboard Routes */}
           <Route path="/agent/*" element={<DashboardLayout><div>Agent Dashboard</div></DashboardLayout>} />

@@ -1,7 +1,7 @@
+
 import { Users, TrendingUp, FileText } from "lucide-react";
 import { AgentKpiCard } from "@/components/agent/AgentKpiCard";
-import { RecentActivityTable } from "@/components/agent/RecentActivityTable";
-import type { Activity } from "@/components/agent/RecentActivityTable";
+import { RecentActivityTable, Activity } from "@/components/agent/RecentActivityTable";
 
 const mockActivities: Activity[] = [
   {

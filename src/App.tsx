@@ -24,6 +24,8 @@ import UnlockMarkets from "./pages/user/UnlockMarkets";
 import AgentHome from "./pages/agent/Home";
 import Commissions from "./pages/agent/Commissions";
 import ManageClients from "./pages/agent/ManageClients";
+import SalesAndOffers from "./pages/agent/SalesAndOffers";
+import TokenizeProperties from "./pages/agent/TokenizeProperties";
 
 const queryClient = new QueryClient();
 
@@ -50,6 +52,8 @@ const App = () => {
           <Route path="/agent" element={<DashboardLayout><AgentHome /></DashboardLayout>} />
           <Route path="/agent/commissions" element={<DashboardLayout><Commissions /></DashboardLayout>} />
           <Route path="/agent/clients" element={<DashboardLayout><ManageClients /></DashboardLayout>} />
+          <Route path="/agent/sales" element={<DashboardLayout><SalesAndOffers /></DashboardLayout>} />
+          <Route path="/agent/tokenize" element={<DashboardLayout><TokenizeProperties /></DashboardLayout>} />
           
           {/* Admin & Developer Dashboard Routes */}
           <Route path="/admin/*" element={<DashboardLayout><div>Admin Dashboard</div></DashboardLayout>} />

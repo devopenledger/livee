@@ -1,5 +1,5 @@
 
-import { Users, Home, FileText } from "lucide-react";
+import { Users, Home as HomeIcon, FileText } from "lucide-react";
 import { KpiCard } from "@/components/dashboard/KpiCard";
 import { AdminActivityTable } from "@/components/admin/AdminActivityTable";
 
@@ -14,19 +14,19 @@ export default function AdminHome() {
         <KpiCard
           title="Total Users"
           value="1,243"
-          icon={Users}
+          icon={<Users />}
           trend={{ value: 8, isPositive: true }}
         />
         <KpiCard
           title="Active Rentals"
           value="876"
-          icon={Home}
+          icon={<HomeIcon />}
           trend={{ value: 12, isPositive: true }}
         />
         <KpiCard
           title="Tokens Issued"
           value="156,240"
-          icon={FileText}
+          icon={<FileText />}
           trend={{ value: 5, isPositive: true }}
         />
       </div>

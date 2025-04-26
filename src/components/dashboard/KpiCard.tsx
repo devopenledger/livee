@@ -1,11 +1,12 @@
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { cn } from "@/lib/utils";
+import { ReactNode } from "react";
 
 interface KpiCardProps {
   title: string;
   value: string;
-  icon: React.ReactNode;
+  icon: ReactNode;
   trend?: {
     value: number;
     isPositive: boolean;

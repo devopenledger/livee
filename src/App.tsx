@@ -1,3 +1,4 @@
+
 import * as React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { PublicLayout } from "./components/layout/PublicLayout";
@@ -27,6 +28,18 @@ import ManageClients from "./pages/agent/ManageClients";
 import SalesAndOffers from "./pages/agent/SalesAndOffers";
 import TokenizeProperties from "./pages/agent/TokenizeProperties";
 
+// Admin Dashboard Pages
+import AdminHome from "./pages/admin/Home";
+import UserManagement from "./pages/admin/UserManagement";
+import AgentManagement from "./pages/admin/AgentManagement";
+import PropertyManagement from "./pages/admin/PropertyManagement";
+import UnitRentalsManagement from "./pages/admin/UnitRentalsManagement";
+import VehicleRentalsManagement from "./pages/admin/VehicleRentalsManagement";
+import MortgageManagement from "./pages/admin/MortgageManagement";
+import RentalContractsManagement from "./pages/admin/RentalContractsManagement";
+import MarketplaceManagement from "./pages/admin/MarketplaceManagement";
+import ReportsAndAdminTools from "./pages/admin/ReportsAndAdminTools";
+
 const queryClient = new QueryClient();
 
 const App = () => {
@@ -55,8 +68,19 @@ const App = () => {
           <Route path="/agent/sales" element={<DashboardLayout><SalesAndOffers /></DashboardLayout>} />
           <Route path="/agent/tokenize" element={<DashboardLayout><TokenizeProperties /></DashboardLayout>} />
           
-          {/* Admin & Developer Dashboard Routes */}
-          <Route path="/admin/*" element={<DashboardLayout><div>Admin Dashboard</div></DashboardLayout>} />
+          {/* Admin Dashboard Routes */}
+          <Route path="/admin" element={<DashboardLayout><AdminHome /></DashboardLayout>} />
+          <Route path="/admin/users" element={<DashboardLayout><UserManagement /></DashboardLayout>} />
+          <Route path="/admin/agents" element={<DashboardLayout><AgentManagement /></DashboardLayout>} />
+          <Route path="/admin/properties" element={<DashboardLayout><PropertyManagement /></DashboardLayout>} />
+          <Route path="/admin/rentals" element={<DashboardLayout><UnitRentalsManagement /></DashboardLayout>} />
+          <Route path="/admin/vehicles" element={<DashboardLayout><VehicleRentalsManagement /></DashboardLayout>} />
+          <Route path="/admin/mortgages" element={<DashboardLayout><MortgageManagement /></DashboardLayout>} />
+          <Route path="/admin/contracts" element={<DashboardLayout><RentalContractsManagement /></DashboardLayout>} />
+          <Route path="/admin/marketplace" element={<DashboardLayout><MarketplaceManagement /></DashboardLayout>} />
+          <Route path="/admin/reports" element={<DashboardLayout><ReportsAndAdminTools /></DashboardLayout>} />
+          
+          {/* Developer Dashboard Routes */}
           <Route path="/developer/*" element={<DashboardLayout><div>Developer Dashboard</div></DashboardLayout>} />
           
           {/* 404 Route */}

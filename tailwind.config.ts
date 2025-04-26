@@ -23,6 +23,12 @@ export default {
         primary: "#60A5FA",
         graphite: "#1A1A1A",
         white: "#FFFFFF",
+        // ADD THESE NEW COLORS
+        sidebar: "#F9FAFB",
+        "sidebar-foreground": "#1A1A1A",
+        "sidebar-border": "#E5E7EB",
+        "sidebar-accent": "#E5E7EB",
+        "sidebar-accent-foreground": "#1A1A1A",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],

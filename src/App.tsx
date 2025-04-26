@@ -1,4 +1,3 @@
-
 import * as React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { PublicLayout } from "./components/layout/PublicLayout";
@@ -20,6 +19,10 @@ import ConciergeRequests from "./pages/user/ConciergeRequests";
 import ProductMarketplace from "./pages/user/ProductMarketplace";
 import MyAdvisors from "./pages/user/MyAdvisors";
 import UnlockMarkets from "./pages/user/UnlockMarkets";
+
+// Agent Dashboard Pages
+import AgentHome from "./pages/agent/Home";
+import Commissions from "./pages/agent/Commissions";
 
 const queryClient = new QueryClient();
 
@@ -43,12 +46,11 @@ const App = () => {
           <Route path="/user/unlock-markets" element={<DashboardLayout><UnlockMarkets /></DashboardLayout>} />
           
           {/* Agent Dashboard Routes */}
-          <Route path="/agent/*" element={<DashboardLayout><div>Agent Dashboard</div></DashboardLayout>} />
+          <Route path="/agent" element={<DashboardLayout><AgentHome /></DashboardLayout>} />
+          <Route path="/agent/commissions" element={<DashboardLayout><Commissions /></DashboardLayout>} />
           
-          {/* Admin Dashboard Routes */}
+          {/* Admin & Developer Dashboard Routes */}
           <Route path="/admin/*" element={<DashboardLayout><div>Admin Dashboard</div></DashboardLayout>} />
-          
-          {/* Developer Dashboard Routes */}
           <Route path="/developer/*" element={<DashboardLayout><div>Developer Dashboard</div></DashboardLayout>} />
           
           {/* 404 Route */}

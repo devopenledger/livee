@@ -23,6 +23,7 @@ import UnlockMarkets from "./pages/user/UnlockMarkets";
 // Agent Dashboard Pages
 import AgentHome from "./pages/agent/Home";
 import Commissions from "./pages/agent/Commissions";
+import ManageClients from "./pages/agent/ManageClients";
 
 const queryClient = new QueryClient();
 
@@ -48,6 +49,7 @@ const App = () => {
           {/* Agent Dashboard Routes */}
           <Route path="/agent" element={<DashboardLayout><AgentHome /></DashboardLayout>} />
           <Route path="/agent/commissions" element={<DashboardLayout><Commissions /></DashboardLayout>} />
+          <Route path="/agent/clients" element={<DashboardLayout><ManageClients /></DashboardLayout>} />
           
           {/* Admin & Developer Dashboard Routes */}
           <Route path="/admin/*" element={<DashboardLayout><div>Admin Dashboard</div></DashboardLayout>} />

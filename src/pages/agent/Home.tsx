@@ -3,7 +3,10 @@ import { Users, TrendingUp, FileText } from "lucide-react";
 import { AgentKpiCard } from "@/components/agent/AgentKpiCard";
 import { RecentActivityTable } from "@/components/agent/RecentActivityTable";
 
-const mockActivities = [
+// Corrigir aqui - tipar corretamente:
+import type { Activity } from "@/components/agent/RecentActivityTable"; // Ajuste o caminho se necessário
+
+const mockActivities: Activity[] = [
   {
     id: "1",
     type: "sale",

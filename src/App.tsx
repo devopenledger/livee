@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { PublicLayout } from "./components/layout/PublicLayout";
 import { DashboardLayout } from "./components/layout/DashboardLayout";
@@ -13,6 +12,9 @@ import ForgotPassword from "./pages/auth/ForgotPassword";
 import VerifyEmail from "./pages/auth/VerifyEmail";
 import NotFound from "./pages/NotFound";
 
+// User Dashboard Pages
+import DashboardHome from "./pages/user/Home";
+
 const queryClient = new QueryClient();
 
 const App = () => {
@@ -21,49 +23,15 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           {/* Public Routes */}
-          <Route
-            path="/"
-            element={
-              <PublicLayout>
-                <Index />
-              </PublicLayout>
-            }
-          />
-          <Route
-            path="/login"
-            element={
-              <PublicLayout>
-                <Login />
-              </PublicLayout>
-            }
-          />
-          <Route
-            path="/register"
-            element={
-              <PublicLayout>
-                <Register />
-              </PublicLayout>
-            }
-          />
-          <Route
-            path="/forgot-password"
-            element={
-              <PublicLayout>
-                <ForgotPassword />
-              </PublicLayout>
-            }
-          />
-          <Route
-            path="/verify-email"
-            element={
-              <PublicLayout>
-                <VerifyEmail />
-              </PublicLayout>
-            }
-          />
+          <Route path="/" element={<PublicLayout><Index /></PublicLayout>} />
+          <Route path="/login" element={<PublicLayout><Login /></PublicLayout>} />
+          <Route path="/register" element={<PublicLayout><Register /></PublicLayout>} />
+          <Route path="/forgot-password" element={<PublicLayout><ForgotPassword /></PublicLayout>} />
+          <Route path="/verify-email" element={<PublicLayout><VerifyEmail /></PublicLayout>} />
 
           {/* User Dashboard Routes */}
-          <Route path="/user/*" element={<DashboardLayout><div>User Dashboard</div></DashboardLayout>} />
+          <Route path="/user" element={<DashboardLayout><DashboardHome /></DashboardLayout>} />
+          {/* Other user routes will be added here */}
           
           {/* Agent Dashboard Routes */}
           <Route path="/agent/*" element={<DashboardLayout><div>Agent Dashboard</div></DashboardLayout>} />
